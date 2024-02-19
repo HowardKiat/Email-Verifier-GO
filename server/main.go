@@ -16,7 +16,6 @@ func main() {
 	for scanner.Scan() {
 		checkDomain(scanner.Text())
 	}
-
 	// err = errors
 	// nil = null value
 
