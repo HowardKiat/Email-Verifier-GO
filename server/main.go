@@ -56,4 +56,6 @@ func checkDomain(domain string) {
 
 	}
 
+	dmarcRecords, err := net.LookupTXT("_dmarc." + domain)
+
 }
