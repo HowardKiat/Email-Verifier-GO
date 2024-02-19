@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -12,6 +13,13 @@ func main() {
 
 	for scanner.Scan() {
 		checkDomain(scanner.Text())
+	}
+
+	// err = errors
+	// nil = null value
+
+	if err := scanner.Err(); err != nil {
+		log.Fatal("Error: could not read from input: %v\n", err)
 	}
 }
 
